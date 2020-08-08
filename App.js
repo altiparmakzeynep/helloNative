@@ -22,15 +22,16 @@ const news = [{
 
 class App extends Component{
 
-    addNews(){
-        console.log("It's working");
-    }
+    // addNews(){
+    //     console.log("It's working");
+    // }
+     addNews = () => {console.log("It's working")};
 
 
     render(){
         return(
         
-            <News news={news} addNews={this.addNews}/>
+            <News news={news} addNews={this}/>
 
         );
  }

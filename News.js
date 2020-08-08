@@ -44,8 +44,7 @@ static defaultProps = {
           
           {/* <Text>{this.props.name}</Text> */}
 
-
-           
+           <Text>{"\n"}</Text>
           <NewsForm addNews={this.props.addNews}></NewsForm>
          
         

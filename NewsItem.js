@@ -8,8 +8,8 @@ class NewsItem extends Component{
        return(
            <View>
              {/* <Text>Welcome to React!</Text> */}
-             <Text>{this.props.title}</Text>
-             <Text>{this.props.description}</Text>
+             <Text style={styles.title}>{this.props.title}</Text>
+             <Text style={styles.description}>{this.props.description}</Text>
 
 
            </View>
@@ -19,5 +19,21 @@ class NewsItem extends Component{
        )
    }
 }
+
+const styles = StyleSheet.create({
+  title:{
+   fontSize:40,
+   color:"purple"
+  },
+  description:{
+    fontSize:30,
+    color:"black"
+    
+  }
+
+});
+
+
+
 
 export default NewsItem;
