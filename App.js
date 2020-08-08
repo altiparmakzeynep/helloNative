@@ -1,12 +1,8 @@
 import React,{Component} from 'react';
 import {StyleSheet,Text,View} from 'react-native';
 
-
 import NewsItem from './NewsItem';
 import News from './News';
-
-
-
 
 class App extends Component{
     render(){
@@ -27,11 +23,9 @@ class App extends Component{
           description:"description 3" 
         }];
 
-      
         return(
-         
+        
             <News news={news}/>
-            
 
         );
  }
