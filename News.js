@@ -1,11 +1,23 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {StyleSheet,View,Text} from 'react-native';
+import {StyleSheet,View,Text,Button} from 'react-native';
 import NewsItem from './NewsItem';
 import NewsForm from './NewsForm';
 
 
 class News extends Component{
+    state = {
+        name:"zeynep"
+    };
+    //sadece burası değiştiği için sadece burası render edilir.
+    changeName = () => {
+        this.setState({
+           name:"selin" + Math.floor(Math.random()*10)
+        });
+       
+
+    }
+  
 
     //ilk calisan metod
 constructor(props){
@@ -25,9 +37,10 @@ static propTypes = {
  
 };
 
-static defaultProps = {
-    name:"duru"
-}
+// static defaultProps = {
+//     name:"duru"
+// }
+
     render(){
         console.log(this.props.addNews);
         return(
@@ -41,13 +54,13 @@ static defaultProps = {
                 )
                 
           }
-          
-          {/* <Text>{this.props.name}</Text> */}
+
+<Text style={styles.zeynep}>{this.state.name}</Text>
+
+<Button onPress={()=>this.changeName()}title="change the name"></Button>
 
            <Text>{"\n"}</Text>
           <NewsForm addNews={this.props.addNews}></NewsForm>
-         
-        
             </View>
               
         )
@@ -65,6 +78,11 @@ const styles = StyleSheet.create({
     welcome:{
         fontSize:20,
         textAlign:"center"
+    },
+    zeynep:{
+        fontSize:40,
+        alignItems:"center"
+        
     }
 });
 
