@@ -6,17 +6,15 @@ import NewsForm from './NewsForm';
 
 
 class News extends Component{
-    state = {
-        name:"zeynep"
-    };
+    // state = {
+    //     name:"zeynep"
+    // };
     //sadece burası değiştiği için sadece burası render edilir.
-    changeName = () => {
-        this.setState({
-           name:"selin" + Math.floor(Math.random()*10)
-        });
-       
-
-    }
+    // changeName = () => {
+    //     this.setState({
+    //        name:"selin" + Math.floor(Math.random()*10)
+    //     });
+    // }
   
 
     //ilk calisan metod
@@ -55,9 +53,9 @@ static propTypes = {
                 
           }
 
-<Text style={styles.zeynep}>{this.state.name}</Text>
+{/* <Text style={styles.zeynep}>{this.state.name}</Text>
 
-<Button onPress={()=>this.changeName()}title="change the name"></Button>
+<Button onPress={()=>this.changeName()}title="change the name"></Button> */}
 
            <Text>{"\n"}</Text>
           <NewsForm addNews={this.props.addNews}></NewsForm>

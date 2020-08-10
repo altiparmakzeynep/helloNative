@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import {StyleSheet,Text,View} from 'react-native';
 import NewsItem from './NewsItem';
 import News from './News';
+import Counter from './Counter';
 
 const news = [{
     id:"1",
@@ -28,9 +29,8 @@ addNews = () => {
 }
     render(){
         return(
-        
-            <News news={news} addNews={this.addNews}/>
-
+            // <News news={news} addNews={this.addNews}/> 
+           <Counter></Counter>
         );
  }
 }
@@ -48,5 +48,10 @@ const styles = StyleSheet.create({
     welcome:{
         fontSize:20,
         textAlign:"center"
+    },
+    number:{
+       justifyContent:"center",
+       alignItems:"center",
+       
     }
 });
